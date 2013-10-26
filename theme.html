@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} Ñ {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+        <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
 
         <meta charset="utf-8">
         <meta name="description" content="{block:IndexPage}{block:Description}{MetaDescription}{/block:Description}{/block:IndexPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}" />
@@ -1081,41 +1081,64 @@
         <style type="text/css" media="screen">
             {CustomCSS}
         </style>
-        <!-- Theme CSS -->
-        <style>
-        		/* == Responsive == */
-               @media (max-width: 600px) {
-
-               #container {
-                   width: 90% !important;
-               }
-               .post .caption {
-					width: 100%;
-				}
-				#header, #blog_info, #sidebar, #posts, #footer, .media,  .post .caption  {
-					width:100%;
-					}
-                #blog_avatar {display:none;}
-                body {
-                     width:100%;
-                }
-				}
-				/* == End Responsive == */
-                small {
+         <!-- Theme CSS -->
+         <style>
+        /* == Responsive == */
+        h1 {
+         font-size:56px;
+         line-height:1.5em;
+         font-weight:600;
+        }
+         small {
                     font-size: 12px !important;
                 }
                 .blurb {
-	                font-family: 'Open Sans', Open Sans; display:none;
+                    font-family: 'Open Sans', Open Sans; display:none;
                 }
                 .blurb ul li, .blurb ul {
-	                list-style: none;
-	                list-style-image: none;
-	                list-style-type: none;
+                    list-style: none;
+                    list-style-image: none;
+                    list-style-type: none;
                 }
-				.description {
-				line-height:24px !important;
-				}
-				code {font-family: "Courier New", Courier, monospace;}
+        .description {
+          line-height:24px !important;
+        }
+        .group img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto; 
+            
+        }
+        code {font-family: "Courier New",
+             Courier,
+             monospace;}
+               @media (max-width: 600px) {
+               #container {
+                   width: 90% !important;
+                   overflow: hidden;
+               }
+               h1 {
+                
+                font-size:48px;
+                }
+               .post .caption {
+                    width: 100%;
+                }
+                #header, #blog_info, #sidebar, #posts, #footer, .media,  .post .caption  {
+                    width:100%;
+                    }
+                #blog_avatar {
+                    display:none;
+                
+                }
+                body {
+                     width:100%;
+                }
+                
+                    
+                }
+               
+                
         </style>
 
     </head>
@@ -1159,10 +1182,7 @@
                 </ul>
                 
                 <div class="blurb">
-                <ul>
-					 <li>Inaudible Discussion is the personal blog of Greg Gant, a Mobile Front End Web Developer in Eugene, OR. Topics range from mobile tech news to design tidbits. I only post when I have some relevant to add to the discussion. My interests are Web Design, UIX, anything mobile related, and pension for A/V (especially pertaining to web). </li>
-
-                </ul>
+             
                 </div>
 
                 {block:Twitter}
@@ -1321,7 +1341,7 @@
                             
                             {block:Quote}
                                     <section class="caption group">
-                                        <section class="quote {Length}_text {block:IfUseLargerFontForQuotes}larger_text{/block:IfUseLargerFontForQuotes}"><span>Ò</span>{Quote}Ó</section>
+                                        <section class="quote {Length}_text {block:IfUseLargerFontForQuotes}larger_text{/block:IfUseLargerFontForQuotes}"><span>“</span>{Quote}”</section>
                                         {block:Source}
                                             <div class="cont quote_source">&mdash; {Source}</div>
                                         {/block:Source}
@@ -1729,13 +1749,13 @@
         {block:IfUseEndlessScrolling}<script type="text/javascript" src="http://assets.tumblr.com/javascript/tumblelog.js"></script>{/block:IfUseEndlessScrolling}
    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>   
 
-<!-- ================================================= -->
-<!-- Please host this on your web space fitvidsjs.com  -->
-<!-- ================================================= -->
+<!-- ========================================================= -->
+<!-- Please host this on fitvidsjs.com on your own web space   -->
+<!-- ========================================================= -->
 
-<script src="http://www.greggant.com/js/fitvid.js"></script>
+    <script src="http://fitvidsjs.com/js/jquery.fitvids.js"></script>
 
-      <script>
+        <script>
   $(document).ready(function(){
     // Target your .container, .wrapper, .post, etc.
     $(".caption .group").fitVids();
