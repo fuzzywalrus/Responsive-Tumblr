@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} ó {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+        <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} ‚Äî {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
 
         <meta charset="utf-8">
         <meta name="description" content="{block:IndexPage}{block:Description}{MetaDescription}{/block:Description}{/block:IndexPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}" />
@@ -41,6 +41,25 @@
 
         <!-- Theme CSS -->
         <style type="text/css" media="screen">
+
+
+        @font-face {
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 400;
+          src: local('Raleway'), url(http://fonts.gstatic.com/s/raleway/v9/QAUlVt1jXOgQavlW5wEfxQLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+        /* latin */
+        @font-face {
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 200;
+          src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url(http://fonts.gstatic.com/s/raleway/v9/8KhZd3VQBtXTAznvKjw-kwzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+        }
+
+
         @font-face {
           font-family: 'Open Sans';
           font-style: normal;
@@ -353,7 +372,7 @@
 
             .caption h2 a {
                 color: #333;
-                font-weight: bold;
+                /* font-weight: bold;*/
                 letter-spacing: -1px;
             }
             .caption h3 {
@@ -1081,27 +1100,16 @@
         <style type="text/css" media="screen">
             {CustomCSS}
         </style>
-         <!-- Theme CSS -->
-         <style>
-        /* == Responsive == */
+        <style>
+        
         h1 {
          font-size:56px;
          line-height:1.5em;
          font-weight:600;
         }
-         small {
-                    font-size: 12px !important;
-                }
-                .blurb {
-                    font-family: 'Open Sans', Open Sans; display:none;
-                }
-                .blurb ul li, .blurb ul {
-                    list-style: none;
-                    list-style-image: none;
-                    list-style-type: none;
-                }
-        .description {
-          line-height:24px !important;
+        h1,h2,h3,h4,h5 {
+            font-family: 'Raleway', 'Open Sans', sans-serif;
+              font-weight: 200;
         }
         .group img {
             display: block;
@@ -1116,6 +1124,7 @@
                #container {
                    width: 90% !important;
                    overflow: hidden;
+                    box-sizing: border-box;
                }
                h1 {
                 
@@ -1182,7 +1191,10 @@
                 </ul>
                 
                 <div class="blurb">
-             
+                <ul>
+                     <li>Inaudible Discussion is the personal blog of Greg Gant, a Mobile Front End Web Developer in Eugene, OR. Topics range from mobile tech news to design tidbits. I only post when I have some relevant to add to the discussion. My interests are Web Design, UIX, anything mobile related, and pension for A/V (especially pertaining to web). </li>
+
+                </ul>
                 </div>
 
                 {block:Twitter}
@@ -1341,7 +1353,7 @@
                             
                             {block:Quote}
                                     <section class="caption group">
-                                        <section class="quote {Length}_text {block:IfUseLargerFontForQuotes}larger_text{/block:IfUseLargerFontForQuotes}"><span>ì</span>{Quote}î</section>
+                                        <section class="quote {Length}_text {block:IfUseLargerFontForQuotes}larger_text{/block:IfUseLargerFontForQuotes}"><span>‚Äú</span>{Quote}‚Äù</section>
                                         {block:Source}
                                             <div class="cont quote_source">&mdash; {Source}</div>
                                         {/block:Source}
@@ -1748,12 +1760,7 @@
         {/block:IfGoogleAnalyticsID}
         {block:IfUseEndlessScrolling}<script type="text/javascript" src="http://assets.tumblr.com/javascript/tumblelog.js"></script>{/block:IfUseEndlessScrolling}
    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>   
-
-<!-- ========================================================= -->
-<!-- Please host this on fitvidsjs.com on your own web space   -->
-<!-- ========================================================= -->
-
-    <script src="http://fitvidsjs.com/js/jquery.fitvids.js"></script>
+<script src="http://www.greggant.com/js/fitvid.js"></script>
 
         <script>
   $(document).ready(function(){
